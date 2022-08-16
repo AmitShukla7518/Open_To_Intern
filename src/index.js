@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-mongoose.connect("mongodb+srv://aneel_11:uUjly3oOvF7vFmzv@anilcluster.9ltebdm.mongodb.net/group7Database",{useNewUrlParser: true})
+mongoose.connect("mongodb+srv://Amit7518:Amit7518@cluster0.rwmfg9t.mongodb.net/Project2",{useNewUrlParser: true})
 .then(()=>console.log("MongoDb is connected"))
 .catch(error=>console.log(error))
 

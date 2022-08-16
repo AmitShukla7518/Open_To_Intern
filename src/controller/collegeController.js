@@ -8,7 +8,6 @@ const bodyValidator = function (data) {
 const isValid = function (data) {
     if (typeof data === "undefined" || typeof data === "number" || data === null) return false
     if (typeof data === "string" && data.trim().length === 0) return false
-
     return true;
 }
 
@@ -25,7 +24,6 @@ let nameValidator = function(data){
 const createColleges = async function (req, res) {
     try {
         let data = req.body
-
         if (!bodyValidator(req.body)) return res.status(400).send({ status: false, message: "please provide details" })
         const { name, fullName, logoLink } = req.body
         if (!isValid(name)) return res.status(400).send({ status: false, message: "please provide Name" })
